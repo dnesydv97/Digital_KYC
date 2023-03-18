@@ -1,0 +1,115 @@
+<Box />
+        <Text style={{marginLeft: 20, fontWeight: 'bold'}}>
+          Services of Bank
+        </Text>
+        <BankServices />
+        <Text style={{marginLeft: 20, fontWeight: 'bold'}}>
+          Open bank account
+        </Text>
+        <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+          <AccountType />
+          <AccountType />
+          <AccountType />
+        </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            flex: 1,
+          }}>
+          <AccountType />
+          <AccountType />
+          <MoreAccountTypes KYC={props.goToKYCSteps} />
+        </View>
+        <Text style={{marginLeft: 20, fontWeight: 'bold', marginTop: 10}}>
+          Open bank account
+        </Text>
+        <ScheduleMeetingBox />
+
+
+
+
+        ...............................................................................................
+        Modals
+        ................................................................................................
+        : state === 'second-model' ? (
+            <ScrollView>
+              <View style={{}}>
+                <Text style={{fontSize: 50}}>Request Exists!</Text>
+                <Text style={{marginBottom: 30, fontSize: 15}}>
+                  Lorem ipsum dolor sit amet, has movet voluptatum no, nibh
+                  commodo scripta et est. Meliore repudiare his id. Per utinam
+                  evertitur cu, movet aperiri ad sea. Cu quis reque mel, quo
+                  nullam eligendi cu, ea sed homero utamur
+                </Text>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: '#dfa00a',
+                    borderRadius: 25,
+                    padding: 10,
+                    alignSelf: 'stretch',
+                    alignItems: 'center',
+                  }}
+                  onPress={() => setState('third-model')}>
+                  <Text style={{color: 'white', fontSize: 18}}>
+                    Go to Homepage
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </ScrollView>
+          ) : (
+            <ScrollView>
+              <View style={{justifyContent: 'center', alignItems: 'center'}}>
+                <Image
+                  source={require('../../../../../../assets/verification.png')}
+                  style={{marginTop: 20, marginBottom: 15}}
+                />
+                <Text style={{fontSize: 18}}>Verification Code</Text>
+                <Text>
+                  Please enter verification code sent to you via email
+                </Text>
+                <InputOTP />
+                <TouchableOpacity
+                  onPress={() => console.log('modals completed')}
+                  style={{
+                    backgroundColor: '#dfa00a',
+                    borderRadius: 25,
+                    padding: 10,
+                    alignSelf: 'stretch',
+                    alignItems: 'center',
+                    marginBottom: 10,
+                  }}>
+                  <Text
+                    style={{color: 'white', fontSize: 18, fontWeight: 'bold'}}>
+                    Verify
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Text style={{fontSize: 18}}>Resend</Text>
+                </TouchableOpacity>
+              </View>
+            </ScrollView>
+          )}
+          cellView: {
+    paddingVertical: 11,
+    width: 60,
+    height: 60,
+    margin: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 6,
+    backgroundColor: '#f2f6fa',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.4,
+    shadowRadius: 3.84,
+
+    elevation: 10,
+  },
+  cellText: {
+    textAlign: 'center',
+    fontSize: 20,
+  },
